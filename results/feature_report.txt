@@ -1,0 +1,10 @@
+音频文件: data/ASDchild2.wav
+
+特征文件列表:
+waveform: results\features\ASDchild2_waveform.png
+vad: results\features\ASDchild2_vad.png
+rhythm: results\features\ASDchild2_rhythm.png
+mfcc: results\features\ASDchild2_mfcc.png
+spectrogram: results\features\ASDchild2_spectrogram.png
+formant: results\features\ASDchild2_formant.png
+quality: results\features\ASDchild2_quality.png
