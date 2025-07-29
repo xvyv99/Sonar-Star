@@ -27,7 +27,7 @@ Visit https://sonar.vip.cpolar.top/ to see our project demonstration results.
 
 ## ✨ System Features
 
-- **Early Screening**: Enables early detection of autism in children aged 1-2 years
+- **Early Screening**: Enables early detection of autism in children aged 1-6 years
 - **Non-invasive**: Only requires audio recording analysis, no complex clinical examinations
 - **Multi-channel Analysis**: Simultaneously analyzes multiple acoustic features including MFCC, spectrogram, short-time energy, zero-crossing rate, and formants
 - **High-precision Prediction**: Uses advanced SE-ResNet50 deep learning model to improve prediction accuracy
