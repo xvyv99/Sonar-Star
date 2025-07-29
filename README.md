@@ -1,14 +1,34 @@
-# 声纳星鉴 - 自闭症早期筛查系统
+<p align="center">
+  <img src="https://img.shields.io/badge/声纳星鉴-自闭症早期筛查系统-blue" alt="声纳星鉴-自闭症早期筛查系统" width="600"/>
+  <br/>
+  <br/>
+</p>
 
-![版本](https://img.shields.io/badge/version-1.0.0-blue)
-![许可证](https://img.shields.io/badge/license-MIT-green)
-![Python](https://img.shields.io/badge/python-3.6%2B-blue)
 
-星语自闭症早期筛查系统是一个基于声纹AI技术的自闭症早期筛查工具，可在儿童1-2岁时通过分析语音特征发现自闭症风险。系统使用深度学习技术分析儿童语音中的多种声学特征，实现高精度的自闭症风险预测。
+<p align="center">
+    <a href="https://github.com/HIT-JimmyXiao/Sonar-Star/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-green"></a>
+    <a href="https://github.com/HIT-JimmyXiao/Sonar-Star/releases"><img alt="Release" src="https://img.shields.io/badge/version-1.0.2-blue"></a>
+    <a href="https://pytorch.org/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-%3E%3D1.8-orange"></a>
+    <a href="https://python.org/"><img alt="Python" src="https://img.shields.io/badge/Python-3.6%2B-blue"></a>
+</p>
 
-可以直接访问  https://sonar.vip.cpolar.top/ 查看我们的项目展示结果
 
-## 系统特点
+
+<h4 align="center">
+    <p>
+        <b>简体中文</b> |
+        <a href="https://github.com/HIT-JimmyXiao/Sonar-Star/blob/main/README_en.md">English</a>
+    </p>
+</h4>
+
+
+## 📋 项目概述
+
+声纳星鉴是一个基于声纹AI技术的自闭症早期筛查工具，可在儿童1-2岁时通过分析语音特征发现自闭症风险。系统使用深度学习技术分析儿童语音中的多种声学特征，实现高精度的自闭症风险预测。
+
+可以直接访问 https://sonar.vip.cpolar.top/ 查看我们的项目展示结果
+
+## ✨ 系统特点
 
 - **早期筛查**：针对1-6岁儿童，实现自闭症的早期发现
 - **非侵入性**：仅通过录音分析，无需复杂的临床检查
@@ -16,7 +36,7 @@
 - **高精度预测**：采用先进的SE-ResNet50深度学习模型，提高预测准确率
 - **易于使用**：简单的命令行界面，支持批量处理和单个音频分析
 
-## 项目结构
+## 🔍 项目结构
 
 ```
 星语自闭症早期筛查系统/
@@ -59,8 +79,7 @@
 └── requirements.txt            # 依赖库
 ```
 
-
-## 星语自闭症筛查系统原理图
+## 🔄 系统原理图
 
 ```mermaid
 flowchart TD
@@ -83,31 +102,33 @@ flowchart TD
     F --> G[生成报告]
 ```
 
-## 环境配置
+## 🚀 环境配置与使用
 
-### 依赖安装
+### 安装步骤
 
-```bash
-git clone https://github.com/HIT-JimmyXiao/Sonar-Star.git
-```
+1. 克隆仓库
 
-2. 创建虚拟环境（可选）：
+   ```bash
+   git clone https://github.com/HIT-JimmyXiao/Sonar-Star.git
+   ```
 
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-```
+2. 创建虚拟环境（可选）
 
-3. 安装依赖：
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Linux/Mac
+   venv\Scripts\activate     # Windows
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+3. 安装依赖
 
-## 使用方法
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 单通道模式
+### 使用方法
+
+#### 单通道模式
 
 单通道模式仅使用MFCC特征进行分析：
 
@@ -119,7 +140,7 @@ python audio_processing.py --audio data/ASDchild2.wav --denoise --output results
 python run.py --mode single --test_audio ./data/ASDchild2.wav --skip_training --skip_data_prep
 ```
 
-### 多通道模式
+#### 多通道模式
 
 多通道模式同时分析多种声学特征：
 
@@ -131,7 +152,7 @@ python run.py --mode multi --audio_dir ./data
 python run.py --mode multi --test_audio ./data/ASDchild2.wav --skip_training --skip_data_prep
 ```
 
-### 参数说明
+#### 参数说明
 
 - `--mode`：运行模式，single（单通道）或multi（多通道）
 - `--audio_dir`：音频文件目录
@@ -143,7 +164,7 @@ python run.py --mode multi --test_audio ./data/ASDchild2.wav --skip_training --s
 - `--skip_training`：跳过训练步骤
 - `--skip_data_prep`：跳过数据准备步骤
 
-## 模型说明
+## 🔧 模型说明
 
 ### 单通道模型
 
@@ -176,7 +197,7 @@ python run.py --mode multi --test_audio ./data/ASDchild2.wav --skip_training --s
 - 分类器：增强型多层感知机（2048-1024-512-256-128-2）
 - 输出：正常/自闭症分类结果及概率
 
-## 训练技巧
+## 📊 训练技巧
 
 系统采用多种先进的训练技巧提高模型性能：
 
@@ -186,7 +207,7 @@ python run.py --mode multi --test_audio ./data/ASDchild2.wav --skip_training --s
 - 类别权重平衡：处理不平衡数据集
 - 数据增强：提高模型泛化能力
 
-## 结果解读
+## 📈 结果解读
 
 预测结果包括：
 
@@ -196,19 +217,38 @@ python run.py --mode multi --test_audio ./data/ASDchild2.wav --skip_training --s
 - 可视化特征图像
 - 预测结果图表
 
-## 注意事项
+## ⚠️ 注意事项
 
 - 本系统仅作为筛查工具，不能替代专业医疗诊断
 - 建议使用高质量录音，环境噪音较低
 - 录音时长建议在30秒以上
 - 系统性能与训练数据集规模和质量相关
 
-## 许可证
+## 📄 许可证
 
 本项目采用MIT许可证
 
+## 🤝 贡献
 
+欢迎通过Issue和Pull Request形式贡献代码和提出建议。
+
+## 📚 引用
+
+如果您在研究中使用了本项目，请按以下格式引用：
+
+```bibtex
+@misc{policy-text-classification,
+  author = {哈工大肖景铭、陈玖玖等——声纳星鉴团队},
+  title = {SONAR-STAR},
+  year = {2025},
+  publisher = {GitHub},
+  url = {https://github.com/HIT-JimmyXiao/Sonar-Star}
+}
+```
+
+## 📧 联系方式
 
 如有任何问题或建议，请通过以下方式联系我们：
+
 - 电子邮件：xiao.jm44@qq.com
 - GitHub Issues: https://github.com/HIT-JimmyXiao/Sonar-Star
